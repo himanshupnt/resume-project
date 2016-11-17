@@ -140,13 +140,17 @@ education.display = function() {
         var formattedDegree = HTMLschoolDegree.replace(data, education.schools[school].degree);
         var formattedDates = HTMLschoolDates.replace(data, education.schools[school].dates);
         var formattedLocation = HTMLschoolLocation.replace(data, education.schools[school].location);
+        // var formattedMajor = HTMLschoolMajor.replace(data, education.schools[school].majors);
+        // the line of code above works for formattedMajor, while education.schools[school].majors returns and array. It should
+        //be written as in lines 148 to 151. Why does the above work correctly?
+        // $(".education-entry:last").append(formattedName + formattedDegree, formattedDates, formattedLocation, formattedMajor);
         $(".education-entry:last").append(formattedName + formattedDegree, formattedDates, formattedLocation);
         for (var major = 0; major < education.schools[school].majors.length; major++) {
-          var formattedSchoolMajor =
+          var formattedMajor =
           HTMLschoolMajor.replace(data, education.schools[school].majors[major]);
           $(".education-entry:last").append(formattedMajor);
         }
-        // var formattedMajor = HTMLschoolMajor.replace(data, education.schools[school].majors);
+
 
     }
 };
