@@ -150,8 +150,6 @@ education.display = function() {
           HTMLschoolMajor.replace(data, education.schools[school].majors[major]);
           $(".education-entry:last").append(formattedMajor);
         }
-
-
     }
 };
 
