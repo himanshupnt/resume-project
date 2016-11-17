@@ -66,7 +66,7 @@ var education = {
     }]
 };
 
-var data = %data%;
+var data = "%data%";
 
 bio.display = function() {
     var formattedName =
